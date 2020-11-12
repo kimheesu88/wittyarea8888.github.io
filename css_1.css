@@ -1,209 +1,100 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-   Hello, Git!
-</body>
-</html>
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+@import url('https://fonts.googleapis.com/css?family=Teko:700');
 
-
-
-html
-<div id = "box1">box1</div>
-<div id = "box2">box2</div>
-
-css
-#box1 {
-  background-color: #8B00FF;
-  postion: relative;
-  left : 100px;
-  top: 80px;
-  width: 100px;
-  height: 80px;
+body { 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    color: #1b1b1b;
 }
 
-#box2 {
-  background-color: #FFFF00;
-  postion: relative;
-  left : 100px;
-  top: 80px;
-  width: 100px;
-  height: 80px;
-  barder-radivs: 8px;
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-
-
-
-
-
-
-
-css
-body {
-  font-size : 64px;
+#container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fafafa;
 }
 
-js
-var myText = "DxD";
-document.write(myText+10+ " , 안녕하세요");
-
-var myNumber = 5;
-var yourNumber = 3;
-document.write(myNumber+yourNumber);
-
-var myNumber = 5;
-var yourNumber = 3;
-document.write((myNumber-2)==yourNumber);
-
-var x = 10;
-var y;
-if(x>=20) {y = "성인"}
-else {y="미성년자"}
-document. write(y);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-html
-<div id="box1">box1</div>
-<div id="box2">box2</div>
-
-css
-#box1 {
-  display: inline-block;
-  position: relative;
-  top: 20px;
-  left: 20px;
-  width: 200px;
-  height: 200px;
-  background-color: blue;
-  color: white;
-  font-size: 36px;
-  border: dashed 0px #000000;
-  border-radius: 48px 0 48px 0;
+#header {
+    width: 95%;
+    height: 96px;
+    margin: 0 auto;
 }
 
-#box2 {
-  display: inline-block;
-  position: relative;
-  top: 20px;
-  left: 0px;
-  width: 200px;
-  height: 200px;
-  background-color: #00ff55;
-  color: white;
-  font-size: 36px;
+#site-title {
+    display: flex;
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 96px;
+    font-family: 'Teko', sans-serif;
+    font-size: 96px;
+    color: #ff4081;
 }
 
-
-
-
-
-
-
-
-
-
-html
-<div id="box1">test</div>
-<input id="input" type="text"><br>
-<button id="button" onclick="myFunction()">OK</button>
-
-css
-#box1 {
-  width: 600px;
-  height: 300px;
-  background-color: #80deea;
-  font-size: 48px;
-}
-#input {
-  margin-top: 16px;
-  width: 600px;
-  height: 60px;
-  font-size: 48px;
-  padding: 0;
-}
-#button {
-  width: 200px;
-  height: 60px;
-  font-size: 36px;
-  margin-top: 16px;
-  background-color: #80deea;
-
+#mainmenu {
+    display: flex;
+    height: 96px;
+    margin-right: 32px;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
-js
-// document.write("hello");
-document.getElementById('box1').innerHTML = "box2";
-
-function myFunction() {
-  var inputText = document.getElementById('input').value;
-  document.getElementById('box1').innerHTML = inputText;
-  document.getElementById('input').value = "";
+#mainmenu > li {
+    margin-left: 32px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff4081;
 }
 
-
-
-
-html
-<div id="box1">BOX1</div>
-<div id="box2">BOX2</div>
-<input id="input" type="text"><br>
-<button id="button" onclick="myFunction()">RUN</button>
-
-css
-#box1 {
-  width: 600px;
-  height: 300px;
-  background-color: #80deea;
-  font-size: 48px;
-}
-#box2 {
-  width: 600px;
-  height: 200px;
-  background-color: #ff9999;
-  font-size: 48px;
-}
-#input {
-  margin-top: 16px;
-  width: 600px;
-  height: 60px;
-  font-size: 48px;
-  padding: 0;
-}
-#button {
-  width: 200px;
-  height: 60px;
-  font-size: 36px;
-  margin-top: 16px;
-  background-color: #80deea;
-  border-radius: 32px;
-  border: dashed 2px #000000;
+#mainmenu > li > a:link, #mainmenu > li > a:visited {
+    color:#ff4081;
+    text-decoration: none;
 }
 
-js
-//document.write("hello");
-document.getElementById('box1').innerHTML = "DxD 안녕하세요";
+#mainmenu > li > a:hover {
+    color: #1976d2;
+    border-bottom: dashed 2px #1976d2;
+}
 
-function myFunction() {
-  var inputText = document.getElementById('input').value;
-  document.getElementById('box2').innerHTML = inputText;
-  document.getElementById('input').value = "";
+.submenu {
+    display: none;
+    position: absolute;
+    width: 160px;
+    margin-top: 4px;
+    background-color: antiquewhite;
+}
+
+.submenu > li {
+    margin: 4px;
+}
+
+#main {
+    width: 200%;
+    margin: 0 auto;
+    margin-top: 8px;
+    padding-bottom: 32px;
+    background-color: #ff79b0;
+}
+
+.section {
+    padding: 5px 40px 5px 40px;
+    line-height: 160%;
+    font-size: 24px;
+    text-align: justify;
+}
+
+.image-container {
+    width: auto;
+    margin: auto;
+}
+
+img {
+    max-width: 200px;
 }
