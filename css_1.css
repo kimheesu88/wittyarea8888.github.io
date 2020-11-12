@@ -40,8 +40,8 @@ ul {
 
 #mainmenu {
     display: flex;
-    height: 96px;
-    margin-right: 32px;
+    height: 50px;
+    margin-right: 80px;
     align-items: flex-end;
     justify-content: flex-end;
 }
@@ -76,7 +76,7 @@ ul {
 }
 
 #main {
-    width: 200%;
+    width: 95%;
     margin: 0 auto;
     margin-top: 8px;
     padding-bottom: 32px;
@@ -91,10 +91,19 @@ ul {
 }
 
 .image-container {
-    width: auto;
-    margin: auto;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 img {
-    max-width: 200px;
+    max-width: 100%;
+}
+
+#footer {
+    margin-top: 8px;
+    padding-bottom: 24px;
+    font-size: 16px;
+    text-align: center;
+    color: #ff4081;
 }
