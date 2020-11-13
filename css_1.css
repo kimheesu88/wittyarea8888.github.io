@@ -1,109 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
-@import url('https://fonts.googleapis.com/css?family=Teko:700');
-
-body { 
-    margin: 0; 
-    padding: 0; 
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 16px;
-    color: #1b1b1b;
-}
-
-ul {
+ul, li {
+    margin: 0;
+    padding: 0;
     list-style: none;
-    padding: 0;
-    margin: 0;
-}
+  }
 
-#container {
-    width: 90%;
-    margin: 0 auto;
-    background-color: #fafafa;
-}
-
-#header {
-    width: 95%;
-    height: 96px;
-    margin: 0 auto;
-}
-
-#site-title {
-    display: flex;
-    float: left;
-    margin: 0;
-    padding: 0;
-    height: 96px;
-    font-family: 'Teko', sans-serif;
-    font-size: 96px;
-    color: #ff4081;
-}
-
-#mainmenu {
-    display: flex;
-    height: 50px;
-    margin-right: 80px;
-    align-items: flex-end;
-    justify-content: flex-end;
-}
-
-#mainmenu > li {
-    margin-left: 32px;
-    font-size: 16px;
-    font-weight: 700;
-    color: #ff4081;
-}
-
-#mainmenu > li > a:link, #mainmenu > li > a:visited {
-    color:#ff4081;
-    text-decoration: none;
-}
-
-#mainmenu > li > a:hover {
-    color: #1976d2;
-    border-bottom: dashed 2px #1976d2;
-}
-
-.submenu {
-    display: none;
+  #sub-menu {
     position: absolute;
-    width: 160px;
-    margin-top: 4px;
-    background-color: antiquewhite;
-}
-
-.submenu > li {
-    margin: 4px;
-}
-
-#main {
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 8px;
-    padding-bottom: 32px;
-    background-color: #ff79b0;
-}
-
-.section {
-    padding: 5px 40px 5px 40px;
-    line-height: 160%;
-    font-size: 24px;
-    text-align: justify;
-}
-
-.image-container {
-    width: 95%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-img {
-    max-width: 100%;
-}
-
-#footer {
-    margin-top: 8px;
-    padding-bottom: 24px;
-    font-size: 16px;
-    text-align: center;
-    color: #ff4081;
-}
+    background: #182952;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.15s ease-in;
+  }
+  
+  #sub-menu > li {
+    padding: 16px 28px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+  }
+  
+  #sub-menu > li >  a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+  }
