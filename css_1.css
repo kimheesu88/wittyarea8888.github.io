@@ -1,23 +1,126 @@
-ul, li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
 
-  #sub-menu {
+body { 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Noto Sans KR';
+    font-size: 16px;
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#branding {
+    width: 185px;
+    height: 50px;
+    background-image: url(images/Button_Branding.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
     position: absolute;
-    background: #182952;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.15s ease-in;
-  }
-  
-  #sub-menu > li {
-    padding: 16px 28px;
-    border-bottom: 1px solid rgba(0,0,0,0.15);
-  }
-  
-  #sub-menu > li >  a {
-    color: rgba(255,255,255,0.6);
-    text-decoration: none;
-  }
+    left: 837px;
+    top: 615px;
+    
+}
+
+#ontheup {
+    width: 140px;
+    height: 0px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #fff59d;
+    border-radius: 48px;
+    position: absolute;
+    left: 823px;
+    top: 677px;
+}
+#ontheup li {
+    padding: 5px;
+    padding-left: 8px;
+}
+
+#intarection {
+    width: 185px;
+    height: 50px;
+    background-image: url(images/Button_Intarection.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 1030px;
+    top: 615px;
+    
+
+}
+#honeybee {
+    width: 140px;
+    height: 0px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #fff59d;
+    border-radius: 48px;
+    position: absolute;
+    left: 1025px;
+    top: 675px;
+}
+#honeybee li {
+    padding: 5px;
+    padding-left: 8px;
+}
+
+#website {
+    width: 185px;
+    height: 50px;
+    background-image: url(images/Button_Website.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 837px;
+    top: 490px;
+    
+
+}
+#서울민국 {
+    width: 140px;
+    height: 0px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #fff59d;
+    border-radius: 48px;
+    position: absolute;
+    left: 825px;
+    top: 529px;
+}
+#서울민국 li {
+    padding: 5px;
+    padding-left: 8px;
+}
+
+#pictogram {
+    width: 185px;
+    height: 50px;
+    background-image: url(images/Button_Pictogram.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 1030px;
+    top: 490px;
+    
+
+}
+#한국조폐공사 {
+    width: 140px;
+    height: 0px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #fff59d;
+    border-radius: 48px;
+    position: absolute;
+    left: 1023px;
+    top: 528px;
+}
+#한국조폐공사 li {
+    padding: 5px;
+    padding-left: 8px;
+}
