@@ -11,6 +11,7 @@
 </head>
 
 
+
 <body>
     <section id="main">
         <div>
@@ -64,19 +65,118 @@
                     
     </section> 
                    
-</body>                   
+                  
+<body>
+    <section id= "main">
+        <div>
+            
+            <div style="position: absolute;">  
+        
+        </div>
+    </section>
+    <section id="main">
+        <div>
+            <img src="images/2.png" style="width: 100%;"></img>
+
+        </div>
+    </section>
+    <div id="branding"></div>
+<div id="ontheup">
+<ul>
+    <li>ON THE UP</li>
+</ul>
+</div>
+
+    <div id="intarection"></div>
+<div id="honeybee">
+<ul>
+    <li>HoneyBee</li>
+</ul>
+</div>
+
+    <div id="website"></div>
+<div id="서울민국">
+<ul>
+    <li>서울민국</li>
+    <li>우수리</li>
+</ul>
+</div>
+
+    <div id="pictogram"></div>
+<div id="한국조폐공사">
+<ul>
+    <li>한국조폐공사</li>
+</ul>
+</div>
+
+
+
+
+
 
 
 <script>
 $(document).ready(function(){
-    $("#mainmenu>li").on('mouseover', function(){
-        $(this).children(".submenu").stop().fadeIn(300);
+    $isOn = false;
+    
+    $('#branding').on('click', function(){
+        if(!$isOn) {
+            $('#ontheup').animate({
+                'height': '35px'
+            }, 600);
+            $isOn = true;
+        } else {
+            $('#ontheup').animate({
+                'height': '0px'
+            }, 700);
+            $isOn = false;            
+        }
     });
-    $("#mainmenu>li").on('mouseleave', function(){
-        $(this).children(".submenu").stop().fadeOut(300);
+
+    $('#intarection').on('click', function(){
+        if(!$isOn) {
+            $('#honeybee').animate({
+                'height': '35px'
+            }, 600);
+            $isOn = true;
+        } else {
+            $('#honeybee').animate({
+                'height': '0px'
+            }, 700);
+            $isOn = false;            
+        }
     });
+
+    $('#website').on('click', function(){
+        if(!$isOn) {
+            $('#서울민국').animate({
+                'height': '35px'
+            }, 600);
+            $isOn = true;
+        } else {
+            $('#서울민국').animate({
+                'height': '0px'
+            }, 700);
+            $isOn = false;            
+        }
+    });
+
+    $('#pictogram').on('click', function(){
+        if(!$isOn) {
+            $('#한국조폐공사').animate({
+                'height': '35px'
+            }, 600);
+            $isOn = true;
+        } else {
+            $('#한국조폐공사').animate({
+                'height': '0px'
+            }, 700);
+            $isOn = false;            
+        }
+    });
+
 });
 </script>
 </body>
-    
+
 </html>
