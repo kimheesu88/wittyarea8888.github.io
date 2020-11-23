@@ -1,182 +1,70 @@
 
 <!DOCTYPE html>
-
-<html lang="ko">
-
-<head>
-    <meta charset="utf-8">
+<html>
+    <head>
+        <meta charset="utf-8">
     <link rel="stylesheet" href="css_1.css">
     <script src="jquery-3.5.1.js"></script>
     <title>20201103 / 레이아웃 예제</title>
-</head>
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    
 
-
-
-<body>
-    <section id="main">
+    </head>
+    <body>
+        
         <div>
-                            
-            <div style="position: absolute;">
-                
-                
-                <form>
-                
-                    <style>
-
-                        
-                        .button {
-                          background: linear-gradient(to right, #FFF48B, #00E8A6);
-                          border: none;
-                          color: #4542FF;
-                          opacity: 0.6;
-                          transition: 0.3s;
-                          padding: 17px 40px;
-                          text-align: center;
-                          text-decoration: none;
-                          display: inline-block;
-                          font-size: 21px;
-                          margin: 20px 2px;
-                          cursor: pointer;
-                          border-radius: 48px 48px 48px 48px;
-                        }
-                        .button:hover {opacity: 1}
-                        
-                        .button1 {width: 180px;} 
-                        .button2 {width: 180px;}
-                        .button3 {width: 180px;}
-                        .button4 {width: 180px;}
-                        </style>
-                        
-                        <button class="button button1" style="position: relative; top: 450px; left: 800px;">Webslte </button><br> 
-                        <button class="button button2" style="position: relative; top: 350px; left: 1000px;">Pictogram</button><br>
-                        <button class="button button3" style="position: relative; top: 400px; left: 800px;" >Branding</button><br>
-                        <button class="button button4" style="position: relative; top: 300px; left: 1000px;">Intarection</button>
-                   
-               
-               </form>
-               
-            </div>
-                        
-                <img src="image/1-3.png" style="width: 100%;"></img>
-                        
+           
+<nav role="navigation">
+  <ul id="main-menu">
+    <li><a href="#">Branding</a>
+      <ul id="sub-menu">
+        <li><a href="#" aria-label="subemnu">ON THE UP</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Intarection</a>
+      <ul id="sub-menu">
+        <li><a href="#" aria-label="subemnu">HoneyBee</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Webslte</a>
+      <ul id="sub-menu">
+        <li><a href="#" aria-label="subemnu">서울민국</a></li>
+        <li><a href="#" aria-label="subemnu">우수리 다락방</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Pictogram</a>
+      <ul id="sub-menu">
+        <li><a href="#" aria-label="subemnu">한국조폐공사</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<section>
+  <h2></h2>
+  <p></p>
+</section>
+                </ul>
+            </ul>
         </div>
+        <img src="image/1-3.png" style="width: 100%;"></img>
+    </body>
+</html>
+                                         
+        <script>
+            $(document).ready(function(){
+                $("#spreadBtn02").click(function(){
+                     if($("#hiddenList01").is(":visible")){ 
+                            $("#hiddenList01").slideUp();
+                          }else{
+                            $("#hiddenList01").slideDown();
+                          }
+        
+                     });
+                          
+                 }); 
+            </script>
                         
-            
-                    
+                        
     </section> 
                    
                   
-<body>
-    <section id= "main">
-        <div>
-            
-            <div style="position: absolute;">  
-        
-        </div>
-    </section>
-    <section id="main">
-        <div>
-            
-
-        </div>
-    </section>
-    <div id="branding"></div>
-<div id="ontheup">
-<ul>
-    <li>ON THE UP</li>
-</ul>
-</div>
-
-    <div id="intarection"></div>
-<div id="honeybee">
-<ul>
-    <li>HoneyBee</li>
-</ul>
-</div>
-
-    <div id="website"></div>
-<div id="서울민국">
-<ul>
-    <li>서울민국</li>
-    <li>우수리</li>
-</ul>
-</div>
-
-    <div id="pictogram"></div>
-<div id="한국조폐공사">
-<ul>
-    <li>한국조폐공사</li>
-</ul>
-</div>
-
-
-
-
-
-
-
-<script>
-$(document).ready(function(){
-    $isOn = false;
-    
-    $('#branding').on('click', function(){
-        if(!$isOn) {
-            $('#ontheup').animate({
-                'height': '35px'
-            }, 600);
-            $isOn = true;
-        } else {
-            $('#ontheup').animate({
-                'height': '0px'
-            }, 700);
-            $isOn = false;            
-        }
-    });
-
-    $('#intarection').on('click', function(){
-        if(!$isOn) {
-            $('#honeybee').animate({
-                'height': '35px'
-            }, 600);
-            $isOn = true;
-        } else {
-            $('#honeybee').animate({
-                'height': '0px'
-            }, 700);
-            $isOn = false;            
-        }
-    });
-
-    $('#website').on('click', function(){
-        if(!$isOn) {
-            $('#서울민국').animate({
-                'height': '35px'
-            }, 600);
-            $isOn = true;
-        } else {
-            $('#서울민국').animate({
-                'height': '0px'
-            }, 700);
-            $isOn = false;            
-        }
-    });
-
-    $('#pictogram').on('click', function(){
-        if(!$isOn) {
-            $('#한국조폐공사').animate({
-                'height': '35px'
-            }, 600);
-            $isOn = true;
-        } else {
-            $('#한국조폐공사').animate({
-                'height': '0px'
-            }, 700);
-            $isOn = false;            
-        }
-    });
-
-});
-</script>
-</body>
-
-</html>
