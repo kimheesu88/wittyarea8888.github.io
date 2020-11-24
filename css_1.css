@@ -1,82 +1,178 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
+* {
+  box-sizing: border-box;
+}
 
-/*body 초기화*/
 body {
-  margin: 50;
-  padding: 0;
-  font-family: "Roboto", serif;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  
-}
-
-
-nav {
-  width: 36%;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  right: 170px;
-  top: 480px;
-  border-radius: 48px 48px 48px 48px;
-  background: linear-gradient(90deg, #051937, #004d7a, #008793, #00bf72, #F3F781);
-}
-
-ul, li {
   margin: 0;
-  padding: 0;
-  list-style: none;
-  
+  font-family: Montserrat, sans-serif;
 }
 
-#main-menu > li {
-  float: left;
+figure {
+  margin: 0;
+}
+
+.scroll-container {
+  height: 100vh;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-item {
   position: relative;
+  scroll-snap-align: start;
+  height: 100vh;
+  background-color: #212121;
+}
+.scroll-item:nth-child(2) {
+  background-color: #E040FB;
+}
+.scroll-item:nth-child(2n) h2 {
+  background-color: #1d276b;
+}
+.scroll-item:nth-child(3n) .scroll-item__bg-image img {
+  object-position: bottom;
+}
+.scroll-item h2 {
+  position: sticky;
+  top: 0;
+  margin: 0;
+  padding: 1rem;
+  background-color: #283593;
+  color: #a1aae6;
+  z-index: 1;
 }
 
-#main-menu > li > a {
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.85);
+.scroll-item__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
   text-align: center;
-  text-decoration: none;
+  font-size: 1.2rem;
+}
+.scroll-item__content span {
   display: block;
-  padding: 15px 36px;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
-#main-menu > li:nth-child(1) > a {
-  border-left: 1px solid rgba(0,0,0,0.15);
-}
-
-#sub-menu {
-  position: absolute;
-  top: 45px;
-  left: 20px;
-  background: #182952;
+.scroll-item__inner {
+  border: 2px solid white;
+  padding: 1rem;
+  transition: opacity 800ms, transform 800ms;
   opacity: 0;
-  visibility: hidden;
-  transition: all 0.15s ease-in;
-  border-radius: 0px 0px 20px 20px;
+  transform: translate3d(0, -1.5rem, 0);
 }
-
-#sub-menu > li {
-  padding: 16px 10px;  
-}
-
-#sub-menu > li >  a {
-  color: rgba(255,255,255,0.6);
-  text-decoration: none;
-  font-size: 0.75rem;
-}
-
-#main-menu > li:hover #sub-menu {
+.scroll-item__inner.is-visible {
   opacity: 1;
-  visibility: visible;
+  transform: translate3d(0, 0, 0);
 }
 
-#sub-menu > li >  a:hover {
- text-decoration: underline;
+.scroll-item__bg-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.scroll-item__bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.scroll-item__bg-image::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: background 1000ms;
+}
+.scroll-item__bg-image.is-visible::after {
+  background: rgba(0, 0, 0, 0.3);
 }
 
+@import url("https://fonts.googleapis.com/css?family=Lilita+One");
+
+.bubble {
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+  box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.4), inset 1em 1em 1em rgba(255, 255, 255, 0.6), 0 1em 2em rgba(0, 0, 0, 0.25);
+}
+
+.bubble:hover {
+  display: none;
+}
+
+.b1 {
+  animation: floatup 10s linear infinite, sideways 5s ease-in-out infinite alternate;
+  left: 10%;
+  top: 100%;
+}
+
+.b2 {
+  animation: floatup 5s linear infinite, sideways 4s ease-in-out 1s infinite alternate;
+  left: 15%;
+  top: 30%;
+  transform: scale(0.7);
+}
+
+.b3 {
+  animation: floatup 4s linear infinite, sideways 6s ease-in-out 6s infinite alternate;
+  left: 20%;
+  transform: scale(1.2);
+}
+
+.b4 {
+  animation: floatup 6s linear infinite, sideways 5s ease-in-out 3s infinite alternate;
+  left: 25%;
+  top: 90%;
+  transform: scale(0.5);
+}
+
+.b5 {
+  animation: floatup 8s linear infinite, sideways 6s ease-in-out 3s infinite alternate;
+  left: 30%;
+  top: 30%;
+  transform: scale(1.1);
+}
+
+.b6 {
+  animation: floatup 7s linear infinite, sideways 4s ease-in-out 3.5s infinite alternate;
+  left: 40%;
+  top: 50%;
+  transform: scale(0.7);
+}
+
+.b7 {
+  animation: floatup 6s linear infinite, sideways 5s ease-in-out 4s infinite alternate;
+  left: 90%;
+  top: 90%;
+  transform: scale(0.6);
+}
+
+@keyframes floatup {
+  0% {
+    margin-top: 50%;
+  }
+  100% {
+    margin-top: -50%;
+  }
+}
+@keyframes sideways {
+  0% {
+    margin-left: 0em;
+  }
+  100% {
+    margin-left: 20em;
+  }
+}
